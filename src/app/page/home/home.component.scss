@@ -1,0 +1,24 @@
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+  background-color: #BBCAFE;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #DBBABD;
+}
+.text{
+  margin:20px;
+}
+.img{
+  display: flex;
+  justify-content: center;
+}
+.img_con{
+  width: 60%;
+}
+
