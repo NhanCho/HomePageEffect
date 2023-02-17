@@ -9,12 +9,14 @@
     <span class="example-spacer"></span>
     <div class="sign">
       <img id="img"  [src]="user?.photoURL" /><p id="userName">{{user?.displayName}}</p>
-      <button  mat-button *ngIf="!(user$ |async)"  (click)="login()">SIGN IN</button>
-      <button  mat-button *ngIf="(user$ |async)"  (click)="logout()">SIGN OUT</button>
+      <div class="button">
+      <button style="background-color: gray;"  mat-button *ngIf="!(user$ |async)"  (click)="login()">SIGN IN</button>
+      <button style="background-color: gray;" mat-button *ngIf="(user$ |async)"  (click)="logout()">SIGN OUT</button>
+      </div>
     </div>
   </mat-toolbar>
 </div>
 
 <router-outlet></router-outlet>
-
+<img src="../assets/5673759.jpg">
 

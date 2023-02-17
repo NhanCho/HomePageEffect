@@ -1,9 +1,8 @@
 <div class="content">
   <div>
     <div class="home" *ngFor="let news of (new$ | async)" >
-      <p class="text">{{news.type_of}}</p>
-      <p class="text">{{news.id}}</p>
-      <p class="text"> {{news.title}}</p>
+
+      <p class="title"> {{news.title}}</p>
       <p class="text">{{news.description}}</p>
       <p class="text">{{news.readable_publish_date}}</p>
       <div class="img">
