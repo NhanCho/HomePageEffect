@@ -7,7 +7,7 @@ const routes: Routes = [
     path:'', redirectTo:'',pathMatch:'full'
   },
   { path: 'home',
-  canActivate:[AuthGuard],
+  // canActivate:[AuthGuard],
   loadChildren: () => import('./page/home/home.module').then(m => m.HomeModule)},
 ];
 

@@ -1,3 +1,4 @@
+import { newsReducer } from './reducer/new.reducer';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,6 +13,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ShareMaterialModule } from './module/share-material/share-material.module';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { webEffect } from './effect/news.effect';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { ShareMaterialModule } from './module/share-material/share-material.modu
     provideAuth(() => getAuth()),
     BrowserAnimationsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    EffectsModule.forRoot([
+    webEffect
+    ]),
+    StoreModule.forRoot({news: newsReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,7 +16,8 @@
     </div>
   </mat-toolbar>
 </div>
-
+<div *ngFor="let new of (new$|async)?.news">{{new.title}}</div>
+<div>{{(new$|async)?.numberOfNews}}</div>
 <router-outlet></router-outlet>
-<img src="../assets/5673759.jpg">
+<!-- <img src="../assets/5673759.jpg"> -->
 
