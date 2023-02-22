@@ -10,7 +10,6 @@
     <div class="sign">
       <div class="button">
       </div>
-      <mat-accordion>
         <mat-expansion-panel (opened)="panelOpenState = true"
         (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
@@ -23,7 +22,6 @@
         </mat-expansion-panel-header>
         <button style="background-color: gray;" mat-button *ngIf="(user$ |async)"  (click)="logout()">SIGN OUT</button>
         </mat-expansion-panel>
-        </mat-accordion>
     </div>
   </mat-toolbar>
 </div>
