@@ -1,11 +1,45 @@
 <div class="content">
+  <div id="footer">
+    <div id="page_btn_contain">
+      <button mat-icon-button id="page_btn" [disabled]="current <=1" (click)="getNewsPrev()">
+        <mat-icon>keyboard_arrow_left</mat-icon></button>
+        <div id="pageNumber">{{current}}</div>
+      <button mat-icon-button id="page_btn" [disabled]="current >=4" (click)="getNewsPage()">
+        <mat-icon>keyboard_arrow_right</mat-icon></button>
+    </div>
+  </div>
   <div>
-    <div class="home" *ngFor="let news of (new$ | async)?.news" >
-     <div>
-        {{news.title}}
-     </div>
+    <div class="home" *ngFor="let n of (new$ | async)?.news" >
 
+      <div id="profile">
+        <img id="profileImage" [src]="n.user.profile_image_90" alt="" >
+        <div id="userName">{{n.user.name}}</div>
+      </div>
+      <div id="date">
+        <p>{{ n.readable_publish_date }}</p>
+      </div>
+      <div id="title">
+        <p>{{ n.title }}</p>
+      </div>
+      <div id="description">
+        <p>{{ n.description }}</p>
+      </div>
+      <div id="image"><img [src]="n.social_image" alt="" /></div>
+      <div id="url">
+        <p>{{ n.url }}</p>
+      </div>
+      <br>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="page_btn_contain">
+      <button mat-icon-button id="page_btn" [disabled]="current <=1" (click)="getNewsPrev()">
+        <mat-icon>keyboard_arrow_left</mat-icon></button>
+        <div id="pageNumber">{{current}}</div>
+      <button mat-icon-button id="page_btn" [disabled]="current >=4" (click)="getNewsPage()">
+        <mat-icon>keyboard_arrow_right</mat-icon></button>
     </div>
   </div>
 </div>
+
 

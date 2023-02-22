@@ -13,9 +13,9 @@ export class AppComponent implements OnInit{
   title = 'WebLogin';
 
   new$= new Observable<newState>();
+  panelOpenState = false;
 
   constructor(private authService:AuthService){
-
   }
 
 

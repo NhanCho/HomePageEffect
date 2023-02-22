@@ -1,6 +1,7 @@
 export interface News{
   type_of: string;
   id: number;
+  user:{profile_image_90:string; name:string};
   title: string;
   description: string;
   readable_publish_date: string;

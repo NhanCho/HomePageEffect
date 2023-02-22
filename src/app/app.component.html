@@ -8,11 +8,22 @@
     </form>
     <span class="example-spacer"></span>
     <div class="sign">
-      <img id="img"  [src]="user?.photoURL" /><p id="userName">{{user?.displayName}}</p>
       <div class="button">
-      <button style="background-color: gray;"  mat-button *ngIf="!(user$ |async)"  (click)="login()">SIGN IN</button>
-      <button style="background-color: gray;" mat-button *ngIf="(user$ |async)"  (click)="logout()">SIGN OUT</button>
       </div>
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+        User:
+        </mat-panel-title>
+        <mat-panel-description>
+          <img id="img"  [src]="user?.photoURL" /><p id="userName">{{user?.displayName}}</p><button style="background-color: gray;"  mat-button *ngIf="!(user$ |async)"  (click)="login()">SIGN IN</button>
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+        <button style="background-color: gray;" mat-button *ngIf="(user$ |async)"  (click)="logout()">SIGN OUT</button>
+        </mat-expansion-panel>
+        </mat-accordion>
     </div>
   </mat-toolbar>
 </div>
@@ -20,4 +31,5 @@
 <div>{{(new$|async)?.numberOfNews}}</div>
 <router-outlet></router-outlet>
 <!-- <img src="../assets/5673759.jpg"> -->
+
 

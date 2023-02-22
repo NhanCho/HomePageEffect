@@ -1,8 +1,6 @@
-.title{
-  display: flex;
-  justify-content: center;
+#title{
   font-size: large;
-  font-weight: bold;
+  margin-left: 30px;
 }
 .home{
   display: flex;
@@ -11,20 +9,51 @@
   margin: 40px;
   background-color: #BBCAFE;
 }
+#profile{
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+}
+#userName{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+#profileImage{
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius:50% ;
+  height: 50px;
+}
+#date{
+  margin-left: 15px;
+}
 .content{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #DBBABD;
 }
-.text{
-  margin:20px;
+
+#description{
+  margin-left:30px;
 }
-.img{
+#image{
   display: flex;
   justify-content: center;
 }
-.img_con{
-  width: 60%;
+#url{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
-
+// #footer{
+//   display: flex;
+//   justify-content: center;
+// }
+#page_btn_contain{
+  display: flex;
+  justify-content: center;
+}
+#pageNumber{
+  margin-top: 14px;
+}
